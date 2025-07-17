@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Custom rules */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-dark: #0e152e;
+    --color-light: #f1f5f9;
+    --color-image-bg: #0e152e;
+}
+
+@layer theme {
+    .dark {
+        --color-dark: #f1f5f9;
+        --color-light: #0e152e;
+        --color-image-bg: #334155;
+    }
+}
+
+.input {
+    @apply border border-slate-600 rounded-lg px-5 py-4 focus:outline-0 focus:border-slate-400;
+}
