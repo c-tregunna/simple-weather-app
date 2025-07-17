@@ -11,12 +11,15 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="#454545"  class="icon icon-tabler icons-tabler-filled icon-tabler-brightness dark:fill-dark-grey" id="light-dark-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" /></svg>
     </button>
 
-    <div id="container" class="w-2/3 p-4 border-2 rounded-md border-slate-400 mt-20 flex flex-col gap-10 max-w-[700px] shadow-2xl shadow-black">
-        <h1 class="font-bold text-xl text-center md:text-4xl">Whats the weather doing where you are?</h1>
-        <input type="text" name="" id="location-input" placeholder="Enter Location" class="input">
-        <button class="input hover:bg-slate-100 hover:text-slate-600 duration-200 transition-colors cursor-pointer" id="search-btn">Let's Go!</button>
-        <div id="featured-weather" class="flex w-full text-center gap-3"></div>
-        <div id="hourly-weather" class="flex"></div>
+    <div id="container" class="w-2/3 p-4 border-2 rounded-md border-slate-400 mt-20 flex flex-col max-w-[700px] shadow-2xl shadow-black">
+        <h1 class="font-bold text-xl text-center md:text-4xl mb-5">Whats the weather doing where you are?</h1>
+        <input type="text" name="" id="location-input" placeholder="Enter Location" class="input mb-5">
+        <button class="input hover:bg-slate-100 hover:text-slate-600 duration-200 transition-colors cursor-pointer mb-5" id="search-btn">Let's Go!</button>
+
+        <div id="featured-weather" class="flex w-full content-center text-center gap-3 flex-col md:flex-row md:mb-5"></div>
+        <div id="hourly-weather" class="flex flex-col md:flex-row"></div>
+
+
     </div>
     <script src="app.js"></script>
 </body>

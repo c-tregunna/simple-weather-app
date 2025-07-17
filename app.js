@@ -2,7 +2,7 @@ const container = document.getElementById('container')
 const locationName = document.getElementById('location-input')
 const searchBtn = document.getElementById('search-btn')
 const weatherArticle = document.getElementById('featured-weather')
-const apiKey = '[YOUR-API-KEY]' //i used https://openweathermap.org/api
+const apiKey = '[YOUR API KEY]' //i used https://openweathermap.org/api
 
 const htmlElement = document.documentElement 
 const themeBtn = document.getElementById('theme-btn')
@@ -47,12 +47,12 @@ function createWeatherArticle(data) {
     else {
         const currentTemp = Math.round(data.main.temp - 273.15)
         weatherArticle.innerHTML = `
-            <div class="w-1/2">
+            <div class="md:w-1/2">
                 <h1 class="text-4xl font-bold tracking-wide">${data.name}</h1>
                 <h2 class="text-2xl">${currentTemp}&#8451</h2>
                 <p class="text-xl capitalize">${data.weather[0].description}</p>
             </div>
-            <div class="w-1/2">
+            <div class="md:w-1/2 border-b-1 border-slate-500 md:border-0">
                 <img class="mx-auto drop-shadow-lg" src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
             </div>     
 
@@ -71,10 +71,10 @@ function hourlyForcast(hourlyData) {
         const temperature = Math.round(item.main.temp - 273.15)
 
         const hourlyWeather = `
-                <div class="hourly-item text-center">
+                <div class="w-1/3 mx-auto hourly-item text-center border-b-1 border-slate-500 md:border-0 py-2">
                     <span>${hour}:00</span>
-                    <img class="drop-shadow-lg" src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" alt="Hourly Weather Icon">
-                    <span>${temperature}°C</span>
+                    <img class="drop-shadow-lg mx-auto" src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" alt="Hourly Weather Icon">
+                    <span">${temperature}°C</span>
                 </div>        
         `
         hourlyDataArticle.innerHTML += hourlyWeather
